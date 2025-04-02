@@ -8,8 +8,37 @@ package com.mycompany.projets2;
  *
  * @author Justin
  */
-public class Poste {
+import java.util.ArrayList;
+       
+public class Poste extends Equipement {
     private int refposte;
     private String dposte;
+    private ArrayList<Machine> machines;
+
+    public int getRefposte() {
+        return refposte;
+    }
+
+    public void setRefposte(int refposte) {
+        this.refposte = refposte;
+    }
+
+    public String getDposte() {
+        return dposte;
+    }
+
+    public void setDposte(String dposte) {
+        this.dposte = dposte;
+    }
+
+    public ArrayList<Machine> getMachines() {
+        return machines;
+    }
+
+    public void setMachines(ArrayList<Machine> machines) {
+        this.machines = machines;
+    }
+    
+    
     
 }
