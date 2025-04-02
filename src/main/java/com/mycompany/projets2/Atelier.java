@@ -1,0 +1,34 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.projets2;
+
+import java.util.ArrayList;
+
+/**
+ *
+ * @author Justin
+ */
+public class Atelier {
+    private String designation ;
+    private ArrayList<Equipement> equipements;
+
+    public String getDesignation() {
+        return designation;
+    }
+
+    public ArrayList<Equipement> getEquipements() {
+        return equipements;
+    }
+
+    public void setDesignation(String designation) {
+        this.designation = designation;
+    }
+
+    public void setEquipements(ArrayList<Equipement> equipements) {
+        this.equipements = equipements;
+    }
+
+    
+}
