@@ -10,10 +10,12 @@ package com.mycompany.projets2;
  */
 import java.util.ArrayList;
        
-public class Poste extends Equipement {
+public class Poste extends Equipement{
     private int refposte;
     private String dposte;
     private ArrayList<Machine> machines;
+    
+    
 
     @Override
     public float coutOperation(float dureeOperation){
