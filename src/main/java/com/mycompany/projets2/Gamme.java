@@ -35,9 +35,23 @@ public class Gamme {
     public void afficherGamme (){
         System.out.println ("Référence de la Gamme :"+refGamme);
         for (Equipement e : equipements){
-            e.AfficherEquipement();
+            e.AfficherEquipement(); //meth de la classe abs Equipement
         }
-         
+    }    
+    public float coutGamme(){    
+        float coutTotal = 0;
+        for (Opération op : operations){
+            coutTotal += op.getRefEquipement().coutOperation(op.getDureeOperation());//pr avoir le cout d'une gamme = pls opération on additionne le cout de chaque opé et ce cout est calculé par rapport à la machine(equipement) utilisé dans l'opé donc on recup cet attribut et on lui calcule son cout avec le meth def dans Machine qui prend en para la durée de l'op
+        }        
+        return coutTotal;         
+    }
+    
+    public float dureeGamme() {
+        float dureeTotal = 0;
+        for (Opération opr : operations) {
+            dureeTotal += opr.getDureeOperation(); // pour chaque opé on récup sa durée (attribut de opé) mais comme privé on utilie get
+        }
+        return dureeTotal;
     }
     public String getRefGamme() {
         return refGamme;
