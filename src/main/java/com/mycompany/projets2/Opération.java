@@ -14,7 +14,12 @@ public class Opération {
     private Equipement refEquipement;// pr enlever l'errur dans Gamme
     private float dureeOperation;
     
-    
+    public Opération(String idOperation,String refOperation,Equipement refEquipement, float dureeOperation ){
+        this.idOperation = idOperation;
+        this.refOperation = refOperation;
+        this.refEquipement = refEquipement;
+        this.dureeOperation = dureeOperation;
+    }
 
     public String getIdOperation() {
         return idOperation;
