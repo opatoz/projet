@@ -9,15 +9,28 @@ package com.mycompany.projets2;
  * @author Justin
  */
 public class Machine extends Equipement {
-    private int refmachine;
+    private String refmachine;
     private String dmachine;
     private float x;
     private float y;
     private float coût;
     private float durée;
     private String type;
+    
+    public Machine (String refmachine, String dmachine, float x, float y, float cout, String type){
+        this.refmachine = refmachine;
+        this.dmachine = dmachine;
+        this.x = x;
+        this.y = y;
+        this.coût = cout;
+        this.type = type;    
+    }
+    
+    public float Duree (Produit p){
+            //écrire operation 
+            return durée;
 
-    public int getRefmachine() {
+    public String getRefmachine() {
         return refmachine;
     }
 
@@ -45,7 +58,7 @@ public class Machine extends Equipement {
         return type;
     }
 
-    public void setRefmachine(int refmachine) {
+    public void setRefmachine(String refmachine) {
         this.refmachine = refmachine;
     }
 
