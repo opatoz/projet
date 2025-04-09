@@ -35,7 +35,7 @@ public class Gamme {
     public void afficherGamme (){
         System.out.println ("Référence de la Gamme :"+refGamme);
         for (Equipement e : equipements){
-            e.AfficherEquipement(); //meth de la classe abs Equipement
+            e.afficherEquipement(); //meth de la classe abs Equipement
         }
     }    
     public float coutGamme(){    
