@@ -22,15 +22,41 @@ public class Gamme {
     }
     // le constructeur et créeGamme font la mm chose donc on fait qd mm créeGamme ?
     
+    //jsp laquel des deux est la mieux 
     public void modifierGamme (ArrayList<Opération> operations, ArrayList<Equipement> equipements ){
         this.operations = operations;
         this.equipements = equipements;
+        // peut être améliorer car la on change tout mais avec index on pourrait changer qu'ne opé/eq dans la liste
     }
+    public void modifierGamme(String refOperation, String nouvelleDesignation, float nouvelleDuree, Equipement nouvelEquipement) {
+    boolean trouve = false; // pour vérifier si on trouve bien une opération correspondante à la ref entré 
+
+    for (Opération op : operations) {
+        if (op.getRefOperation().equals(refOperation)) {
+            op.setIdOperation(nouvelleDesignation);
+            op.setDureeOperation(nouvelleDuree);
+            op.setRefEquipement(nouvelEquipement);
+
+            if (!equipements.contains(nouvelEquipement)) {
+                equipements.add(nouvelEquipement);
+            }
+
+            trouve = true;// si on trouve une ope qui correspond à la ref trouve=true donc c'est ok on sort de la boucle 
+            System.out.println("Opération modifiée avec succès.");
+            break;
+        }
+    }
+
+    if (!trouve) { // sinon trouve reste false donc on affiche un message d'erreur
+        System.out.println("Aucune opération trouvée avec la référence : " + refOperation);
+    }
+}
     
     public void supprimerGamme(){
         this.refGamme = null;
         this.operations.clear(); // clear = methode qui vide une liste en gardant sa ref (pas besoin de crée nouvelle instance : this.ope = list vide)
         this.equipements.clear();
+        // pareil peut supp q'une seul ope si besoin avec index
     }
     public void afficherGamme (){
         System.out.println ("Référence de la Gamme :"+refGamme);
