@@ -37,11 +37,11 @@ public Poste(String refPoste, String dPoste, ArrayList<Machine> machines) {
             m.afficherEquipement();
         }
     }
-    public int getRefposte() {
+    public String getRefposte() {
         return refposte;
     }
 
-    public void setRefposte(int refposte) {
+    public void setRefposte(String refposte) {
         this.refposte = refposte;
     }
 
