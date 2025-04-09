@@ -11,6 +11,16 @@ package com.mycompany.projets2;
 public class Produit {
     private String codeProduit ;
     private String dProduit;
+    
+    public Produit(String codeProduit, String dProduit) {
+        this.codeProduit = codeProduit;
+        this.dProduit = dProduit;
+    }
+    
+    public void afficherProduit(){
+        System.out.println("code du produit:"+codeProduit);
+        System.out.println("désignation du produit:"+dProduit);
+    }
 
     public String getCodeProduit() {
         return codeProduit;
