@@ -11,7 +11,7 @@ package com.mycompany.projets2;
 public class Opération {
     private String idOperation;
     private String refOperation;
-    private String refEquipement;
+    private Equipement refEquipement;// pr enlever l'errur dans Gamme
     private float dureeOperation;
     
     
@@ -24,7 +24,7 @@ public class Opération {
         return refOperation;
     }
 
-    public String getRefEquipement() {
+    public Equipement getRefEquipement() {
         return refEquipement;
     }
 
@@ -40,7 +40,7 @@ public class Opération {
         this.refOperation = refOperation;
     }
 
-    public void setRefEquipement(String refEquipement) {
+    public void setRefEquipement(Equipement refEquipement) {
         this.refEquipement = refEquipement;
     }
 
