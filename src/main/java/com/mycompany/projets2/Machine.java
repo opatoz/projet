@@ -32,7 +32,16 @@ public class Machine extends Equipement {
 
     public float coutOperation (float d){
         return d*coût;
-    }        
+    }   
+    
+    public void afficherMachine() {
+        System.out.println("Référence Machine: " + refmachine);
+        System.out.println("Désignation: " + dmachine);
+        System.out.println("Type: " + type);
+        System.out.println("Coût horaire: " + coût);
+        System.out.println("Position: (" + x + ", " + y + ")");
+        System.out.println("Durée d'opération (produit spécifique) : " + durée);
+    }
     
     public String getRefmachine(){
         return refmachine;
