@@ -13,6 +13,11 @@ import java.util.ArrayList;
 public class Atelier {
     private String designation ;
     private ArrayList<Equipement> equipements;
+    
+    public Atelier(String designation, ArrayList<Equipement> equipements){
+        this.designation = designation;
+        this.equipements = equipements;
+    }
 
     public String getDesignation() {
         return designation;
