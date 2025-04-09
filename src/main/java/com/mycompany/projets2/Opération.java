@@ -20,6 +20,12 @@ public class Opération {
         this.refEquipement = refEquipement;
         this.dureeOperation = dureeOperation;
     }
+    public void afficherOperation() {
+        System.out.println("Référence Opération: " + refOperation);
+        System.out.println("Désignation: " + idOperation);
+        refEquipement.afficherEquipement();  // Affiche les informations de l'équipement
+        System.out.println("Durée de l'opération: " + dureeOperation + " heures");
+    }
 
     public String getIdOperation() {
         return idOperation;
