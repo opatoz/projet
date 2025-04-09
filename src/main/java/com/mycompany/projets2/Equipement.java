@@ -8,15 +8,19 @@ package com.mycompany.projets2;
  *
  * @author Elève
  */
-public class Equipement {
-    private String identifiant;
-
-    public String getIdentifiant() {
-        return identifiant;
+public abstract class Equipement { // abs pour rassembler les opérations commune à Machine et Poste
+    private String RefEquipement;
+    
+    public void AfficherEquipement (){
+    }
+    public abstract float coutOperation(float dureeOperation);
+    }
+    public String getRefEquipement() {// faut les enlever ou pas 
+        return RefEquipement;
     }
 
-    public void setIdentifiant(String identifiant) {
-        this.identifiant = identifiant;
+    public void setRefEquipement(String RefEquipement) {
+        this.RefEquipement = RefEquipement;
     }
     
 }
