@@ -18,8 +18,9 @@ public class Machine extends Equipement {
     private String type;
     
     public Machine (String refmachine, String dmachine, float x, float y, float cout, String type){
-        this.refmachine = refmachine;
-        this.dmachine = dmachine;
+        super(refmachine,dmachine);
+        //this.refmachine = refmachine;
+        //this.dmachine = dmachine;
         this.x = x;
         this.y = y;
         this.coût = cout;
