@@ -26,11 +26,15 @@ public class Machine extends Equipement {
         this.type = type;    
     }
     
-    public float Duree (Produit p){
+    public float duree (Produit p){
             //écrire operation 
             return durée;
 
-    public String getRefmachine() {
+    public float coutOperation (float d){
+        return d*coût;
+    }        
+    
+    public String getRefmachine(){
         return refmachine;
     }
 
