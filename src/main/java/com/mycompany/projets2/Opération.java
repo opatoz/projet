@@ -13,6 +13,8 @@ public class Opération {
     private String refOperation;
     private String refEquipement;
     private float dureeOperation;
+    
+    
 
     public String getIdOperation() {
         return idOperation;
