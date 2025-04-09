@@ -15,6 +15,23 @@ public class Poste extends Equipement {
     private String dposte;
     private ArrayList<Machine> machines;
 
+    @Override
+    public float coutOperation(float dureeOperation){
+        float coutTotal = 0.0f;
+        for (Machine machine : machines) {
+            coutTotal += machine.coutOperation(dureeOperation);
+        }
+        return coutTotal;
+    }
+    
+    @Override
+    public void afficherEquipement(){
+        System.out.println("Reférence Poste:"+refposte);
+        System.out.println("Designation:"+dposte);
+        for (Machine m : machines){
+            m.afficherEquipement();
+        }
+    }
     public int getRefposte() {
         return refposte;
     }
