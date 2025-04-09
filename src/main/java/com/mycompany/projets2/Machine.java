@@ -29,12 +29,14 @@ public class Machine extends Equipement {
     public float duree (Produit p){
             //écrire operation 
             return durée;
-
-    public float coutOperation (float d){
-        return d*coût;
-    }   
-    
-    public void afficherMachine() {
+    }
+    @Override
+    public float coutOperation(float dureeOperation){
+        return dureeOperation * coût;
+    }
+  
+    @Override
+    public void afficherEquipement() { // j'avais mis afficherMachine au début mais marcher pas car faut implement toute les methode de la classe Eq si on peut veut Machine soit pas une classe ab
         System.out.println("Référence Machine: " + refmachine);
         System.out.println("Désignation: " + dmachine);
         System.out.println("Type: " + type);
