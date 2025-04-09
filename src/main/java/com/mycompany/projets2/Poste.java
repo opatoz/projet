@@ -11,12 +11,15 @@ package com.mycompany.projets2;
 import java.util.ArrayList;
        
 public class Poste extends Equipement{
-    private int refposte;
+    private String refposte;
     private String dposte;
     private ArrayList<Machine> machines;
     
     
-
+public Poste(String refPoste, String dPoste, ArrayList<Machine> machines) {
+        super(refPoste,dPoste);
+        this.machines = machines;
+    }
     @Override
     public float coutOperation(float dureeOperation){
         float coutTotal = 0.0f;
