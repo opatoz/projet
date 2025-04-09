@@ -14,7 +14,31 @@ public class Gamme {
     private String refGamme;
     private ArrayList<Opération> operations;
     private ArrayList<Equipement> equipements;
-
+    
+    public Gamme (String refGamme, ArrayList<Opération> operations, ArrayList<Equipement> equipements ){
+        this.refGamme = refGamme;
+        this.operations = operations;
+        this.equipements = equipements;        
+    }
+    // le constructeur et créeGamme font la mm chose donc on fait qd mm créeGamme ?
+    
+    public void modifierGamme (ArrayList<Opération> operations, ArrayList<Equipement> equipements ){
+        this.operations = operations;
+        this.equipements = equipements;
+    }
+    
+    public void supprimerGamme(){
+        this.refGamme = null;
+        this.operations.clear(); // clear = methode qui vide une liste en gardant sa ref (pas besoin de crée nouvelle instance : this.ope = list vide)
+        this.equipements.clear();
+    }
+    public void afficherGamme (){
+        System.out.println ("Référence de la Gamme :"+refGamme);
+        for (Equipement e : equipements){
+            e.AfficherEquipement();
+        }
+         
+    }
     public String getRefGamme() {
         return refGamme;
     }
