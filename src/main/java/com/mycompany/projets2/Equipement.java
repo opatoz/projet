@@ -12,10 +12,7 @@ public abstract class Equipement { // abs pour rassembler les opérations commun
     private String refEquipement;
     private String dEquipement;
     
-    public Equipement(String refEquipement,String dEquipement){
-        this.refEquipement = refEquipement;
-        this.dEquipement = dEquipement;
-    }
+    
     public abstract void afficherEquipement ();
 
     public abstract float coutOperation(float dureeOperation);
