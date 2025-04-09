@@ -40,7 +40,7 @@ public class Gamme {
     }    
     public float coutGamme(){    
         float coutTotal = 0;
-        for (Opération op : operations){
+        for (Opération op : operations){ //je crois erreur car getRef est un string or cotope se fait sur un type Eq : effectivement
             coutTotal += op.getRefEquipement().coutOperation(op.getDureeOperation());//pr avoir le cout d'une gamme = pls opération on additionne le cout de chaque opé et ce cout est calculé par rapport à la machine(equipement) utilisé dans l'opé donc on recup cet attribut et on lui calcule son cout avec le meth def dans Machine qui prend en para la durée de l'op
         }        
         return coutTotal;         
