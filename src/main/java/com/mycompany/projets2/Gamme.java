@@ -23,27 +23,12 @@ public class Gamme {
     // le constructeur et créeGamme font la mm chose donc on fait qd mm créeGamme ?
     
     //jsp laquel des deux est la mieux 
-    //public void modifierGamme (ArrayList<Opération> operations, ArrayList<Equipement> equipements ){
-        //this.operations = operations;
-        //this.equipements = equipements;
+    public void modifierGamme (ArrayList<Opération> operations, ArrayList<Equipement> equipements ){
+        this.operations = operations;
+        this.equipements = equipements;
         // peut être améliorer car la on change tout mais avec index on pourrait changer qu'ne opé/eq dans la liste
     
-    //} j'ai améliorer mais du coup y a deux trucs différents
-    public void modifierOperation(int index, Opération nouvelleOp) {//int index : emplacement de ce qu'on veut changer
-    if (index >= 0 && index < operations.size()) { //verifie que l'emplacament est bien dans la liste
-        operations.set(index, nouvelleOp);
-    } else {
-        System.out.println("Index invalide.");
-    }
-}
-
-public void modifierEquipement(int index, Equipement nouvelEq) {
-    if (index >= 0 && index < equipements.size()) {
-        equipements.set(index, nouvelEq);
-    } else {
-        System.out.println("Index invalide.");
-    }
-}
+    } 
 
     public void modifierGamme(String refOperation, String nouvelleDesignation, float nouvelleDuree, Equipement nouvelEquipement) {
     boolean trouve = false; // pour vérifier si on trouve bien une opération correspondante à la ref entré 
