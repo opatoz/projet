@@ -30,15 +30,15 @@ public class Gamme {
     
     } 
 
-    public void modifierGamme(String refOperation, String nouvelleDesignation, float nouvelleDuree, Equipement nouvelEquipement) {
+    public void modifierGamme(String refOperation, float nouvelleDuree, Equipement nouvelEquipement) {
     boolean trouve = false; // pour vérifier si on trouve bien une opération correspondante à la ref entré 
 
     for (Opération op : operations) {
         if (op.getRefOperation().equals(refOperation)) {
-            op.setIdOperation(nouvelleDesignation);
             op.setDureeOperation(nouvelleDuree);
             op.setRefEquipement(nouvelEquipement);
 
+            //mis à jour de la liste des equipements si besoin
             if (!equipements.contains(nouvelEquipement)) {
                 equipements.add(nouvelEquipement);
             }
@@ -68,7 +68,7 @@ public class Gamme {
     }    
     public float coutGamme(){    
         float coutTotal = 0;
-        for (Opération op : operations){ //je crois erreur car getRef est un string or cotope se fait sur un type Eq : effectivement
+        for (Opération op : operations){ //je crois erreur car getRef est un string or coutope se fait sur un type Eq : effectivement
             coutTotal += op.getRefEquipement().coutOperation(op.getDureeOperation());//pr avoir le cout d'une gamme = pls opération on additionne le cout de chaque opé et ce cout est calculé par rapport à la machine(equipement) utilisé dans l'opé donc on recup cet attribut et on lui calcule son cout avec le meth def dans Machine qui prend en para la durée de l'op
         }        
         return coutTotal;         
