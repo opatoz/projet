@@ -27,5 +27,59 @@ public class Evenement {
         this.typeEv = typeEv;
         this.cause = cause;
     }
+    //necéssaire ?
+@Override
+    public String toString() {
+        return date + " " + heure + " " + machine + " " + typeEv + " " + operateur + " " + cause;
+    }
+    
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public String getHeure() {
+        return heure;
+    }
+
+    public void setHeure(String heure) {
+        this.heure = heure;
+    }
+
+    public String getMachine() {
+        return machine;
+    }
+
+    public void setMachine(String machine) {
+        this.machine = machine;
+    }
+
+    public char getTypeEv() {
+        return typeEv;
+    }
+
+    public void setTypeEv(char typeEv) {
+        this.typeEv = typeEv;
+    }
+
+    public String getOperateur() {
+        return operateur;
+    }
+
+    public void setOperateur(String operateur) {
+        this.operateur = operateur;
+    }
+
+    public String getCause() {
+        return cause;
+    }
+
+    public void setCause(String cause) {
+        this.cause = cause;
+    }
+    
 }
     
