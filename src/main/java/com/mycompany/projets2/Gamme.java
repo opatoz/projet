@@ -30,8 +30,8 @@ public class Gamme {
     
     } 
 
-    public void modifierGamme(String refOperation, float nouvelleDuree, Equipement nouvelEquipement) {
-    boolean trouve = false; // pour vérifier si on trouve bien une opération correspondante à la ref entré 
+    public void modifierGamme(String refOperation, float nouvelleDuree, Equipement nouvelEquipement) {// on met objet de type opération direct car si on veux juste changer la durée ou l'équipement c'est plus simple
+    boolean trouve = false; // pour caractèriser le fait qu'on trouve ou non une opération correspondante à la ref entrée 
 
     for (Opération op : operations) {
         if (op.getRefOperation().equals(refOperation)) {
@@ -58,7 +58,7 @@ public class Gamme {
         this.refGamme = null;
         this.operations.clear(); // clear = methode qui vide une liste en gardant sa ref (pas besoin de crée nouvelle instance : this.ope = list vide)
         this.equipements.clear();
-        // pareil peut supp q'une seul ope si besoin avec index
+        // pareil peut supp q'une seul ope si besoin avec index : le faire dans modifier ! 
     }
     public void afficherGamme (){
         System.out.println ("Référence de la Gamme :"+refGamme);
