@@ -42,7 +42,7 @@ public class Fiabilité {
         }
     }
 
-    private long calculerDuree(String dateDebut, String heureDebut, String dateFin, String heureFin) {
+    public long calculerDuree(String dateDebut, String heureDebut, String dateFin, String heureFin) {
         
         //crée un DateTimeFormatter pour pouvoir écrire les date et les heures sous un format spécifié que java peut interpréter/manipuler 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
