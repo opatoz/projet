@@ -80,16 +80,16 @@ public class Main {
         Map<String, Long> tempsArret = new HashMap<>();
         Map<String, Evenement> arretsEnCours = new HashMap<>();
         
+        // Créer l'objet Fiabilité
+        Fiabilité fiabilite = new Fiabilité(tempsArret, arretsEnCours);
+        
         // Calculer le temps d'arrêt
-        long dureeArret = fiabilité.calculerDuree(ev1.getDate(), ev1.getHeure(), ev2.getDate(), ev2.getHeure());
+        long dureeArret = fiabilite.calculerDuree(ev1.getDate(), ev1.getHeure(), ev2.getDate(), ev2.getHeure());
         
         // Ajouter les événements dans la map
         arretsEnCours.put(ev1.getMachine(), ev1);
         tempsArret.put(ev1.getMachine(), dureeArret);
 
-        // Créer l'objet Fiabilité
-        Fiabilité fiabilite = new Fiabilité(tempsArret, arretsEnCours);
-        
         // Analyse des événements de maintenance
         fiabilite.analyser(evenements);
 
