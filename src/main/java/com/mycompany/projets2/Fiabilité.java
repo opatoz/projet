@@ -17,6 +17,10 @@ public class Fiabilité {
     private Map<String, Long> tempsArret = new HashMap<>(); // pour stocker les temps d'arrêt totals de chaque machine
     private Map<String, Evenement> arretsEnCours = new HashMap<>(); // pour mémoriser l'evenement de type A et l'utiliser pour calculer le temps d'arret d'une machine
 
+    public Fiabilité (Map<String, Long> tempsArret, Map<String, Evenement> arretsEnCours ){
+        this.tempsArret = tempsArret;
+        this.arretsEnCours = arretsEnCours;
+}
     public void analyser(List<Evenement> ev) {
         for (Evenement e : ev) {
             String machine = e.getMachine();// récupère le nom de la machine et le type d'evenement 
