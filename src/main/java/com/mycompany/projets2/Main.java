@@ -8,7 +8,7 @@ package com.mycompany.projets2;
  *
  * @author Elève
  */
-import java.util.*;
+/*import java.util.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -99,4 +99,4 @@ public class Main {
         // Affichage de la durée de l'arrêt
         System.out.println("Durée de l'arrêt de la Machine 1 : " + dureeArret + " minutes");
     }
-}
+}/*
