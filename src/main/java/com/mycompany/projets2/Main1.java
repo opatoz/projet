@@ -42,11 +42,11 @@ public class Main1 {
         Machine machine = new Machine(refMachine, dMachine, x, y, cout, etat, type);
 
         // Affichage des informations de la machine
-        System.out.println("\n--- Informations de la machine ---");
+        System.out.println("Informations de la machine :");
         machine.afficherEquipement();
 
         // Test de coût d'une opération
-        System.out.print("\nEntrez la durée d'une opération (en heures) pour tester le coût : ");
+        System.out.print("Entrez la durée d'une opération (en heures) pour tester le coût : ");
         float dureeTest = scanner.nextFloat();
         float coutOperation = machine.coutOperation(dureeTest);
         System.out.println("Coût de l'opération pour " + dureeTest + " heures : " + coutOperation + " €");
