@@ -34,6 +34,4 @@ public class Atelier {
     public void setEquipements(ArrayList<Equipement> equipements) {
         this.equipements = equipements;
     }
-
-    
 }
